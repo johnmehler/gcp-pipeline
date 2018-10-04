@@ -1,20 +1,4 @@
 /*
-TODO:
-
-1. Add if_not_exists logic to existing resources.
-2. Create IAM/API modules
-
-Enable necessary APIs
-I don't know what APIs are necessary-- I enabled them manually as I was working
-After the GCE part is finished, I need to try this with a fresh project
-
-
-DON'T FORGET TO GIVE BUILD TRIGGER SERVICE ACCOUNT ACCESS TOO!!
-THE BUILD TRIGGER HAS TO BE ABLE TO CREATE GCE INSTANCES!!
-*/
-
-
-/*
 Make VPC with subnet and firewall.
 The GCE instance running the application will be in this VPC.
 */
