@@ -39,4 +39,7 @@ module "build-trigger" {
     branch_name = "master"
     credentials = "credentials.json"
     subnet = "${module.vpc.subnetwork_name}"
+
+    zone = "${var.zone}"
+    machine_type = "${var.machine_type}"
 }

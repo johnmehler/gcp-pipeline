@@ -24,7 +24,7 @@ resource "google_cloudbuild_trigger" "build_trigger" {
     }
     step {
       name = "gcr.io/cloud-builders/gcloud"
-      args = "compute instances create-with-container repo-instance --zone=us-west1-b --machine-type=n1-standard-1 --subnet=${var.subnet} --service-account=468734881760-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --image=cos-stable-69-10895-71-0 --image-project=cos-cloud --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=repo-instance --container-image=gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA --labels=container-vm=cos-stable-69-10895-71-0"
+      args = "compute instances create-with-container repo-instance --zone=${var.zone} --machine-type=${var.machine_type} --subnet=${var.subnet} --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --image=cos-stable-69-10895-71-0 --image-project=cos-cloud --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=repo-instance --container-image=gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA --labels=container-vm=cos-stable-69-10895-71-0"
     }
   }
 }

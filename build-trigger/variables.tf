@@ -27,3 +27,10 @@ variable "project_name" {
 variable "subnet" {
     description = "Subnet to host GCE instance"
 }
+
+variable "zone" {
+    default = "us-west1-b"
+}
+variable "machine_type" {
+    default = "n1-standard-1"
+}

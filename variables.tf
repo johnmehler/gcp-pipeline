@@ -19,3 +19,9 @@ variable "repo_name" {
 }
 
 // Build trigger vars
+variable "zone" {
+    default = "us-west1-b"
+}
+variable "machine_type" {
+    default = "n1-standard-1"
+}
