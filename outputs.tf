@@ -8,9 +8,6 @@ output "network_id" {
 output "repo_name" {
     value = "${module.repo.repo_name}"
 }
-output "repo_url" {
-    value = "${module.repo.repo_url}"
-}
 
 
 // Trigger output

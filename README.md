@@ -1,3 +1,6 @@
+1. Create a terraform service account
+
+
 This repository can be used to create a CI/CD pipeline for GCP. This project relies uses Docker to build and push the images to Google Container Registry. A requirements.txt file and Dockerfile must be included in the repository for the Build Trigger not to fail. Examples of these files can be found in the /helpers/ folder.
 
 The workflow is:

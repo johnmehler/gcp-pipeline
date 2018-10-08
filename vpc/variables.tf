@@ -5,7 +5,7 @@ variable "region" {
 
 variable "project_name" {
     description = "The name of the project"
-    default = "jmehler-cicd"
+    default = "jmehler-pipeline"
 } 
 variable "credentials" {
     description = "Name of credentials file"
@@ -21,4 +21,5 @@ variable "subnet_cidr" {
 }
 variable "vpc_name" {
     description = "Name of the VPC"
+    default = "default"
 }
